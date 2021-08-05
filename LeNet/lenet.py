@@ -13,6 +13,7 @@ class LeNet(nn.Module):
         self.linear2 = nn.Linear(84,10)
 
     def forward(self,x):
+        
         x = self.relu(self.conv1(x))
         x = self.pool(x)
         x = self.relu(self.conv2(x))
@@ -23,4 +24,3 @@ class LeNet(nn.Module):
         x = self.linear2(x)
 
         return x
-
